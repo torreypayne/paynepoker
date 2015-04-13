@@ -28,6 +28,6 @@ class Deck < ActiveRecord::Base
   end
   
   def draw
-      self.unshift
+      @cards.unshift
   end
 end
