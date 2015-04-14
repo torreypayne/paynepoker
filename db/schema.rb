@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412092659) do
+ActiveRecord::Schema.define(version: 20150414031506) do
 
   create_table "decks", force: :cascade do |t|
     t.string   "ranks"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20150412092659) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "players", ["email"], name: "index_players_on_email", unique: true
 
   create_table "poker_tables", force: :cascade do |t|
     t.text     "seats"
